@@ -9,12 +9,7 @@ use Illuminate\Support\Facades\Route;
 // });
 use App\Http\Controllers\Api\BarcodeController;
 
-// Route::post('/barcode', [BarcodeController::class, 'store']);
+Route::post('/barcode', [BarcodeController::class, 'store']);
 Route::get('/barcode', [BarcodeController::class, 'index']);
-use App\Http\Controllers\Api\AuthController;
 
-Route::post('/login', [AuthController::class, 'login']);
 
-Route::middleware('auth:sanctum')->group(function () {
-    Route::post('/barcode', [BarcodeController::class, 'store']);
-});
